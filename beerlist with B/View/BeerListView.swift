@@ -9,7 +9,15 @@ import SwiftUI
 
 struct BeerListView: View {
     var body: some View {
-        Text("Beer List")
+        NavigationStack {
+            List {
+                NavigationLink("Vice Bier") {
+                    Text("실패")
+                }
+            }
+            .navigationTitle("Beer List")
+            .listStyle(.plain)
+        }
     }
 }
 

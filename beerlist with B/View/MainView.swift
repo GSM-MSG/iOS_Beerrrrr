@@ -10,7 +10,7 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         HStack {
-            TabView{
+            TabView {
                 BeerListView()
                     .tabItem{
                         VStack{
