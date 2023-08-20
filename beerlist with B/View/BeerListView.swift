@@ -11,8 +11,10 @@ struct BeerListView: View {
     var body: some View {
         NavigationStack {
             List {
-                NavigationLink("Vice Bier") {
-                    Text("실패")
+                HStack {
+                    NavigationLink("Vice Bier") {
+                        BeerListDetailView()
+                    }
                 }
             }
             .navigationTitle("Beer List")
