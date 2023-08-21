@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct RandomBeerView: View {
+    
+    @State private var showBeer = false
+    
     var body: some View {
-        Text("Random Beer")
+        NavigationView {
+            Button {
+                self.showBeer.toggle()
+            } label: {
+                Text("Reset")
+                    .frame(width:110, height:50)
+                    .foregroundColor(Color.white)
+                    .background(Color.blue)
+                    .cornerRadius(30)
+            }.sheet(isPresented: $showBeer) {
+                BeerListDetailView()
+            }.navigationTitle("RandomBeer")
+        }
     }
 }
 
