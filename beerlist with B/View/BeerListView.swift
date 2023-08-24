@@ -12,9 +12,14 @@ struct BeerListView: View {
         NavigationStack {
             List {
                 HStack {
-                    NavigationLink("Vice Bier") {
-                        BeerListDetailView()
-                    }
+                    Image("keg")
+                        .resizable()
+                        .frame(width: 63, height: 125)
+                        .padding(.trailing, 90)
+                    NavigationLink(destination: BeerListDetailView(), label: {
+                        Text("Vice Bier")
+                    })
+                    .font(.system(size: 30))
                 }
             }
             .navigationTitle("Beer List")
