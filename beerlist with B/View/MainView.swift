@@ -13,26 +13,17 @@ struct MainView: View {
             TabView {
                 BeerListView()
                     .tabItem{
-                        VStack{
-                            Image(systemName: "1.circle")
-                            Text("Beer List")
-                        }
+                        Label("BeerList", systemImage: "1.circle")
                     }
-
+                    
                 BeerSearchView()
                     .tabItem{
-                        VStack{
-                            Image(systemName: "2.circle")
-                            Text("Beer Search")
-                        }
+                        Label("BeerSearch", systemImage: "2.circle")
                     }
 
                 RandomBeerView()
                     .tabItem{
-                        VStack{
-                            Image(systemName: "3.circle")
-                            Text("Random Beer")
-                        }
+                        Label("RandomBeer", systemImage: "3.circle")
                     }
             }
         }

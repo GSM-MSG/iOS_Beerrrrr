@@ -16,9 +16,9 @@ struct BeerListView: View {
                         .resizable()
                         .frame(width: 63, height: 125)
                         .padding(.trailing, 90)
-                    NavigationLink("Vice Bier") {
-                        BeerListDetailView()
-                    }
+                    NavigationLink(destination: BeerListDetailView(), label: {
+                        Text("Vice Bier")
+                    })
                     .font(.system(size: 30))
                 }
             }
