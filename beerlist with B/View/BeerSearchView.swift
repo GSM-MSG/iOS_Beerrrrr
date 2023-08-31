@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct BeerSearchView: View {
+    
+    @State private var beerSearch: String = ""
+        
     var body: some View {
-        Text("Beer Search")
+        NavigationStack {
+            Image("keg")
+                .resizable()
+                .frame(width: 63, height: 125)
+                .navigationTitle("Search By Id")
+        }
+        
+        .searchable(text: $beerSearch, prompt: "Search")
     }
 }
 
