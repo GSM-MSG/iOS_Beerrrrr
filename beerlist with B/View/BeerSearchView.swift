@@ -13,12 +13,12 @@ struct BeerSearchView: View {
         
     var body: some View {
         NavigationStack {
-            Image("keg")
+            Image(systemName: "photo.circle.fill")
                 .resizable()
-                .frame(width: 63, height: 125)
+                .frame(width: 300, height: 300)
                 .navigationTitle("Search By Id")
+            Spacer()
         }
-        
         .searchable(text: $beerSearch, prompt: "Search")
     }
 }
