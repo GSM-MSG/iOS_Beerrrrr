@@ -15,6 +15,8 @@
 		AFA46D4D2A8E3564008EC304 /* BeerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA46D4C2A8E3564008EC304 /* BeerListView.swift */; };
 		AFA46D4F2A8E3575008EC304 /* BeerSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA46D4E2A8E3575008EC304 /* BeerSearchView.swift */; };
 		AFA46D512A8E35C1008EC304 /* RandomBeerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA46D502A8E35C1008EC304 /* RandomBeerView.swift */; };
+		AFA611E72AA5B5EF00D63657 /* RandomBeerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611E62AA5B5EF00D63657 /* RandomBeerAPI.swift */; };
+		AFA611E92AA5B9D500D63657 /* RandomBeerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611E82AA5B9D500D63657 /* RandomBeerDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		AFA46D4C2A8E3564008EC304 /* BeerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListView.swift; sourceTree = "<group>"; };
 		AFA46D4E2A8E3575008EC304 /* BeerSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerSearchView.swift; sourceTree = "<group>"; };
 		AFA46D502A8E35C1008EC304 /* RandomBeerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBeerView.swift; sourceTree = "<group>"; };
+		AFA611E62AA5B5EF00D63657 /* RandomBeerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBeerAPI.swift; sourceTree = "<group>"; };
+		AFA611E82AA5B9D500D63657 /* RandomBeerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBeerDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				AFA46D3C2A8E3475008EC304 /* beerlist_with_BApp.swift */,
+				AFA611E52AA5B59800D63657 /* Model */,
 				AFA46D522A8E35CC008EC304 /* View */,
 				AFA46D402A8E3476008EC304 /* Assets.xcassets */,
 				AFA46D422A8E3476008EC304 /* Preview Content */,
@@ -83,8 +88,17 @@
 				AFA46D502A8E35C1008EC304 /* RandomBeerView.swift */,
 				AFA46D4E2A8E3575008EC304 /* BeerSearchView.swift */,
 				0478D3D22A91DC32003E538F /* BeerListDetailView.swift */,
+				AFA611E82AA5B9D500D63657 /* RandomBeerDetailView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		AFA611E52AA5B59800D63657 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AFA611E62AA5B5EF00D63657 /* RandomBeerAPI.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,7 +171,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFA611E72AA5B5EF00D63657 /* RandomBeerAPI.swift in Sources */,
 				AFA46D4B2A8E353A008EC304 /* MainView.swift in Sources */,
+				AFA611E92AA5B9D500D63657 /* RandomBeerDetailView.swift in Sources */,
 				AFA46D3D2A8E3475008EC304 /* beerlist_with_BApp.swift in Sources */,
 				AFA46D4F2A8E3575008EC304 /* BeerSearchView.swift in Sources */,
 				AFA46D512A8E35C1008EC304 /* RandomBeerView.swift in Sources */,
