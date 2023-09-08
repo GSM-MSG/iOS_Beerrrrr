@@ -1,10 +1,10 @@
 import Foundation
 
 struct Beer: Codable, Identifiable {
-    var name: String?
-    var imageURL: String?
-    var description: String?
-    var beerId: Int?
+    var name: String
+    var imageURL: String
+    var description: String
+    var beerId: Int
     let id = UUID()
     
     enum CodingKeys : String, CodingKey {
@@ -29,7 +29,7 @@ final class RandomBeerAPI {
             let randomBeer = try! JSONDecoder().decode([Beer].self, from: data)
             
             DispatchQueue.main.async {
-                completion(randomBeer.first ?? .init())
+                completion(randomBeer.first ?? Beer(name: "", imageURL: "", description: "", beerId: 0))
             }
         }.resume()
     }
