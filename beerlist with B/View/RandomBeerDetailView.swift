@@ -13,7 +13,7 @@ struct RandomBeerDetailView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 300, height: 300)
                 
-                if let beer = beer {
+                if let beer {
                     Text("\(beer.beerId)")
                         .font(.system(size: 12))
                         .foregroundColor(Color.orange)

@@ -24,7 +24,7 @@ final class RandomBeerAPI {
         }
         
         URLSession.shared.dataTask(with: url) {(data, response, error) in
-            guard let data = data else {return}
+            guard let data else {return}
             
             let randomBeer = try! JSONDecoder().decode([Beer].self, from: data)
             
