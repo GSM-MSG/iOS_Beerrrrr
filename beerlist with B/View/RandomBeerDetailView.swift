@@ -1,4 +1,5 @@
 import SwiftUI
+import Kingfisher
 
 struct RandomBeerDetailView: View {
     let randomBeerAPI = RandomBeerAPI()
@@ -8,12 +9,12 @@ struct RandomBeerDetailView: View {
         ScrollView {
             VStack {
                 Spacer(minLength: 20)
-                Image("keg")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 300, height: 300)
                 
                 if let beer {
+                    KFImage(URL(string:beer.imageURL))
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 300, height: 300)
                     Text("\(beer.beerId)")
                         .font(.system(size: 12))
                         .foregroundColor(Color.orange)
