@@ -1,10 +1,10 @@
 import Foundation
 
 struct Beer: Codable, Identifiable {
-    var name: String?
-    var imageURL: String?
-    var description: String?
-    var beerId: Int?
+    var name: String
+    var imageURL: String
+    var description: String
+    var beerId: Int
     let id = UUID()
     
     enum CodingKeys : String, CodingKey {
@@ -17,7 +17,7 @@ struct Beer: Codable, Identifiable {
 
 final class RandomBeerAPI {
     
-    func getRandomBeerData(completion: @escaping (Beer) -> ()) {
+    func getRandomBeerData(completion: @escaping (Beer?) -> ()) {
         
         guard let url = URL(string: "https://api.punkapi.com/v2/beers/random") else {
             return
@@ -29,7 +29,7 @@ final class RandomBeerAPI {
             let randomBeer = try! JSONDecoder().decode([Beer].self, from: data)
             
             DispatchQueue.main.async {
-                completion(randomBeer.first ?? .init())
+                completion(randomBeer.first)
             }
         }.resume()
     }

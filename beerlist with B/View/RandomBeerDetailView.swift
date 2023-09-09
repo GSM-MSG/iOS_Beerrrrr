@@ -13,24 +13,20 @@ struct RandomBeerDetailView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 300, height: 300)
                 
-                if let beerId = beer?.beerId {
-                    Text("\(beerId)")
+                if let beer = beer {
+                    Text("\(beer.beerId)")
                         .font(.system(size: 12))
                         .foregroundColor(Color.orange)
                     
-                    if let beerName = beer?.name {
-                        Text(beerName)
-                            .font(.system(size: 30))
-                    }
+                    Text(beer.name)
+                        .font(.system(size: 30))
                     
-                    if let beerDescription = beer?.description {
-                        Text(beerDescription)
-                            .font(.system(size: 22))
-                            .padding(.horizontal)
-                            .foregroundColor(Color.gray)
-                    }
+                    Text(beer.description)
+                        .font(.system(size: 22))
+                        .padding(.horizontal)
+                        .foregroundColor(Color.gray)
                 } else {
-                    Text("")
+                    Text("로딩 중...")
                 }
             }
         }
