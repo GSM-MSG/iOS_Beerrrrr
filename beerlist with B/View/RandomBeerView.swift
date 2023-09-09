@@ -22,7 +22,7 @@ struct RandomBeerView: View {
                     .background(Color.blue)
                     .cornerRadius(30)
             }.sheet(isPresented: $showBeer) {
-                BeerListDetailView()
+                RandomBeerDetailView()
             }.navigationTitle("RandomBeer")
         }
     }
